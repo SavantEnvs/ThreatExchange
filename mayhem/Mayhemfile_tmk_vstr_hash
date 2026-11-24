@@ -1,0 +1,9 @@
+project: savantenvs/ThreatExchange
+target: tmk_vstr_hash
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/tmk_vstr_hash/testsuite
+cmds:
+  - cmd: /mayhem/tmk_vstr_hash
+    libfuzzer: true
+    timeout: 5

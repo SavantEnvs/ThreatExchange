@@ -1,0 +1,9 @@
+project: savantenvs/ThreatExchange
+target: tmk_read_features
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/tmk_read_features/testsuite
+cmds:
+  - cmd: /mayhem/tmk_read_features
+    libfuzzer: true
+    timeout: 5

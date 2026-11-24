@@ -1,0 +1,9 @@
+project: savantenvs/ThreatExchange
+target: pdq_float_luma
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/pdq_float_luma/testsuite
+cmds:
+  - cmd: /mayhem/pdq_float_luma
+    libfuzzer: true
+    timeout: 5

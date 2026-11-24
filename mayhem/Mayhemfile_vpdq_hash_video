@@ -1,0 +1,9 @@
+project: savantenvs/ThreatExchange
+target: vpdq_hash_video
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/vpdq_hash_video/testsuite
+cmds:
+  - cmd: /mayhem/vpdq_hash_video
+    libfuzzer: true
+    timeout: 10

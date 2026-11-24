@@ -1,0 +1,9 @@
+project: savantenvs/ThreatExchange
+target: pdq_image_hash
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/pdq_image_hash/testsuite
+cmds:
+  - cmd: /mayhem/pdq_image_hash
+    libfuzzer: true
+    timeout: 5
